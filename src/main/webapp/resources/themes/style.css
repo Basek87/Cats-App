@@ -1,0 +1,202 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #404040;
+	font-family: Lato, sans-serif;
+}
+
+#container {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	color: white;
+	margin-top: 20px;
+	font-size: 44px;
+	letter-spacing: 3px;
+	font-weight: 900;
+}
+
+#menu  {
+	background-color: #303030;
+	margin-top: 20px;
+	color: #ffffff;
+	padding: 10px;
+}
+
+#topbar {
+	background-color: #128870;
+	color: white;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	height: 170px;
+	clear: both;
+}
+
+#topbarL {
+	float: left;
+	padding: 20px;
+	width: 138px;
+	text-align: center;
+	border-right: 2px dotted #cccccc;
+}
+
+#topbarR {
+	float: left;
+	padding: 20px;
+	width: 760px;
+	font-size: 16px;
+	text-align: justify;
+}
+
+#sidebar {
+	float: left;
+	width: 148px;
+	min-height: 620px;
+	padding: 20px;
+	background-color: lightgray;
+	text-align: center;
+	font-size: 18px;
+	border-right: 2px dotted #666666;
+}
+
+#content {
+	float: left;
+	padding: 40px;
+	width: 730px;
+	background-color: #dedede;
+	min-height: 580px;
+	max-height: 580px;
+	text-align: auto;
+	overflow: scroll;
+}
+
+#footer {
+	clear: both;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+}
+
+.photo {
+	max-height: 100%;
+	max-width: 100%;
+	flaot: left;
+}
+
+.photo:hover {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.option {
+	float: left;
+	min-width: 50px;
+	height: 25px;
+	font-size: 18px;
+	padding: 10px;
+	border-right: 2px solid #444444;
+}
+
+.linkTop {
+	color: white;
+	text-decoration: none;
+}
+
+.linkLeft {
+	color: black;
+	text-decoration: none;
+}
+
+.option:hover {
+	background-color: #000000;
+	cursor: pointer;
+}
+
+.optionL {
+	font-size: 18px;
+	height: 25px;
+	padding: 10px;
+	border-bottom: 2px dotted #444444;
+}
+
+.optionL:hover {
+	background-color: #f36742;
+	color: white;
+	cursor: pointer;
+}
+
+.img {
+	float: left;
+	max-width: 120px;
+}
+
+.tab {
+	height: 24px;
+	background-color: #303030;
+	text-color: white;
+	text-align: center;
+	padding: 15px;
+	text-decoration: none;
+}
+
+.tab:hover {
+	background-color: #ffffff;
+	color: black;
+}
+
+.form-group {
+	width: 250px;
+	height: 20px;
+	float: left;
+}
+
+.buttonDel {
+	text-decoration: none;
+	padding: 5px;
+	color: red;
+}
+
+.buttonDel:hover {
+	animation: bounce 1s;
+}
+
+.buttonEdit {
+	text-decoration: none;
+	padding: 5px;
+	color: green;
+}
+
+.buttonEdit:hover {
+	animation: bounce 1s;
+}
+
+.tableCats {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: left;
+	padding: 5px;
+}
+
+.square {
+	width: 800px;
+	height: 500px;
+	float: left;
+}
+
+.photoBlock {
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+
+.dataBlock {
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding-left: 30px;
+}
