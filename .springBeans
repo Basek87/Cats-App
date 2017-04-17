@@ -8,7 +8,6 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/main/java/pl/dawidbasa/cats/config/hibernate-context.xml</config>
-		<config>src/main/java/pl/dawidbasa/cats/config/root-context.xml</config>
 		<config>src/test/java/pl/dawidbasa/cats/test/config/test-context.xml</config>
 	</configs>
 	<autoconfigs>
