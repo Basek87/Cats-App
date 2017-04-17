@@ -10,23 +10,12 @@ public class HomeController {
 	public String welcomeHandler() {
 		return "index";
 	}
-
 	@RequestMapping(value = "/index")
 	public String showHomePage() {
-
 		return "index";
 	}
-
 	@RequestMapping(value = "/aboutCats")
 	public String showAboutCatsPage() {
-
 		return "aboutCats";
 	}
-
-	@RequestMapping(value = "/aboutProject")
-	public String showAboutProjectPage() {
-
-		return "aboutProject";
-	}
-
 }
