@@ -35,13 +35,11 @@ public class AdminController {
 	public void setCatService(CatService catService) {
 		this.catService = catService;
 	}
-
 	@RequestMapping(method = RequestMethod.GET)
 	public String showAdminPage(Model model) {
 		model.addAttribute("cat", new Cat());
 		return "admin";
 	}
-
 	@RequestMapping(value = "/dbManagment", method = RequestMethod.GET)
 	public String showDbManagmentPage(Model model) {
 		model.addAttribute("cat", new Cat());
@@ -49,7 +47,6 @@ public class AdminController {
 		model.addAttribute("listCats", listCats);
 		return "dbManagment";
 	}
-
 	@RequestMapping(value = "/dbManagment/addCat", method = RequestMethod.POST)
 	public String addCat(@Valid @ModelAttribute("cat") Cat cat, BindingResult result, Model model) {
 
@@ -58,7 +55,6 @@ public class AdminController {
 			model.addAttribute("listCats", listCats);
 			return "dbManagment";
 		}
-
 		if (cat.getId() == 0) {
 			// new cat, add it
 			this.catService.addCat(cat);
@@ -68,20 +64,17 @@ public class AdminController {
 		}
 		return "redirect:/admin/dbManagment";
 	}
-
 	@RequestMapping(value = "/dbManagment/editCat/{id}")
 	public String editCat(@PathVariable("id") long id, Model model) {
 		model.addAttribute("cat", this.catService.getCatById(id));
 		model.addAttribute("listCats", this.catService.listCats());
 		return "dbManagment";
 	}
-
 	@RequestMapping(value = "/dbManagment/deleteCat/{id}")
 	public String deleteCat(@PathVariable("id") long id) {
 		this.catService.removeCat(id);
 		return "redirect:/admin/dbManagment";
 	}
-
 	@RequestMapping(value = { "dbManagment/addPhoto/{catId}" }, method = RequestMethod.GET)
 	public String addDocuments(@PathVariable long catId, ModelMap model, HttpServletResponse response) {
 
@@ -93,7 +86,6 @@ public class AdminController {
 		model.addAttribute("catPhotos", catPhotos);
 		return "Photo";
 	}
-
 	@RequestMapping(value = "dbManagment/addPhoto/{catId}", method = RequestMethod.POST)
 	public String uploadCatPhoto(@PathVariable("catId") Long catId, FileBucket fileBucket, ModelMap model) {
 
@@ -107,7 +99,6 @@ public class AdminController {
 		}
 		return "redirect:/admin/dbManagment/addPhoto/" + catId;
 	}
-
 	@RequestMapping(value = "dbManagment/addPhoto/{catId}/delete/{catPhotoId}")
 	public String deleteCatPhoto(@PathVariable("catPhotoId") long catPhotoId, @PathVariable("catId") long catId) {
 		this.catPhotoService.deleteCatPhoto(catPhotoId);

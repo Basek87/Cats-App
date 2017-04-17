@@ -9,40 +9,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
-
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 @Entity
-@Table(name="CatPhoto")
+@Table(name = "CatPhoto")
 public class CatPhoto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
 	private String name;
-	
 	private String type;
-	
 	private String description;
-	
 	private double rate;
-	
 	private double averageRate;
-	
 	private int numberOfRates;
-	
+
 	@Lob
 	private byte[] content;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name ="cat_id")
+	@JoinColumn(name = "cat_id")
 	private Cat cat;
 
-	
 	public CatPhoto() {
 		super();
 	}
@@ -71,7 +58,6 @@ public class CatPhoto {
 		this.type = type;
 	}
 
-	
 	public double getRate() {
 		return rate;
 	}
@@ -142,7 +128,4 @@ public class CatPhoto {
 		return true;
 	}
 
-	
-	
-	
 }

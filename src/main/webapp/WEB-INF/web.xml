@@ -6,24 +6,17 @@
     http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
 	<display-name>cats</display-name>
-
-	<!-- The definition of the Root Spring Container shared by all Servlets 
-		and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 		classpath:pl/dawidbasa/cats/config/hibernate-context.xml
-		classpath:pl/dawidbasa/cats/config/root-context.xml
 		</param-value>
-
 	</context-param>
 
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

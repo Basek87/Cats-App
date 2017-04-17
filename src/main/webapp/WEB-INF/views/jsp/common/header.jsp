@@ -31,10 +31,8 @@
 			<div class="option"><a class="linkTop" href="<c:url value="/index"/>">Home</a></div>
 			<div class="option"><a class="linkTop" href="<c:url value="/top10"/>">Top 10</a></div>
 			<div class="option"><a class="linkTop" href="<c:url value="/aboutCats"/>">O kotach</a></div>
-			<div class="option"><a class="linkTop" href="<c:url value="/aboutProject"/>">O projekcie</a></div>
 			<div class="option"><a class="linkTop" href="<c:url value="/admin"/>"><span
 					title="Po dodaniu serwisu logowania opcja dostępna po zalogowaniu">Admin</span></a>
-				
 			</div>
 			<div style="clear: both;"></div>
 		</div>
@@ -61,5 +59,4 @@
 			<div class="optionL"><a class="linkLeft" href="<c:url value="/index"/>">Home</a></div>
 			<div class="optionL"><a class="linkLeft" href="<c:url value="/top10"/>">Top 10</a> </div>
 			<div class="optionL"><a class="linkLeft" href="<c:url value="/aboutCats"/>">O kotach</a></div>
-			<div class="optionL"><a class="linkLeft" href="<c:url value="/aboutProject"/>">O projekcie</a></div>
 		</div>

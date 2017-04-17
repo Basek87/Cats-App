@@ -8,7 +8,6 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<!-- Data Source Bean configuration to connect database -->
-
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -17,12 +16,10 @@
 		<property name="password" value="root" />
 		
 	</bean>
-
-
+	
 	<!-- Hibernate 5 SessionFactory Bean definition -->
 	<bean id="hibernate5AnnotatedSessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-		<!-- <property name="configLocation" value="classpath:pl/dawidbasa/cats/config/hibernate.cfg.xml" /> -->
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan" value="pl.dawidbasa.cats.model">
 		</property>
@@ -34,7 +31,7 @@
 			</props>
 		</property>
 	</bean>
-
+	
 	<!-- Create DAO Bean -->
 	<bean id="catDAO" class="pl.dawidbasa.cats.dao.CatDAOImpl">
 		<property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory" />

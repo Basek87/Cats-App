@@ -4,8 +4,6 @@
 
 <div id="content">
 
-	Strona w trakcie budowy <br>
-
 	<h3>Dodaj Kota</h3>
 	<c:url var="addAction" value="/admin/dbManagment/addCat"></c:url>
 	<form:form action="${addAction}" modelAttribute="cat" method="post">
@@ -24,7 +22,6 @@
 				<td><form:input path="name" type="text" maxlength="10" />
 				<form:errors path="name" /></td>
 			</tr>
-
 			<tr>
 				<td><form:label path="ownerName">
 						<s:message text="Właściciel" />
@@ -32,15 +29,12 @@
 				<td><form:input path="ownerName" type="text" maxlength="10" />
 				<form:errors path="ownerName" /> </td>
 			</tr>
-
 			<tr>
 				<td><form:label path="age">
 						<s:message text="Wiek" />
 					</form:label></td>
 				<td><form:input path="age" type="number" max="20"  /></td>
 			</tr>
-
-
 			<tr>
 				<td colspan="2"><c:if test="${!empty cat.name}">
 						<input type="submit" value="<s:message text="Edytuj"/>" />
@@ -66,7 +60,6 @@
 				<th class="tableCats">Zdjęcia</th>
 				<th class="tableCats">Edycja</th>
 				<th class="tableCats">Usuwanie</th>
-
 			</tr>
 			<c:forEach items="${listCats}" var="cat">
 				<tr>

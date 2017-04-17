@@ -3,9 +3,8 @@
 	pageEncoding="UTF-8"%>
 
 <div id="content">
-
 	<h3>Dodaj Zdjęcie</h3>
-
+	
 	<form:form modelAttribute="fileBucket" enctype="multipart/form-data"
 		method="POST">
 		<table>
@@ -29,7 +28,6 @@
 			</tr>
 		</table>
 	</form:form>
-
 
 	<br>
 	<h3>Lista Zdjęć</h3>
